@@ -22,6 +22,7 @@ const Home = () => {
         </p>
         <input type="text" value={filter} onChange={(e) => setFilter(e.target.value)} />
       </div>
+      <div className="font-lato text-sm bg-marino-600 text-white p-1">STATS BY GENRE</div>
       <ul>
         {genres && genres.map((genre) => (
           <li key={genre.id} className="even:bg-marino-500 odd:bg-marino-700">
