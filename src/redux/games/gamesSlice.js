@@ -7,7 +7,7 @@ const initialState = {
 export const fetchGamesByGenre = createAsyncThunk(
   'games/fetchGamesByGenre',
   async (genreSlug) => {
-    const res = await fetch(`https://api.rawg.io/api/games?key=f701489903124362ba098939ed7babd7&genres=${genreSlug}`);
+    const res = await fetch(`https://api.rawg.io/api/games?key=f701489903124362ba098939ed7babd7&page_size=40&genres=${genreSlug}`);
     return res.json();
   },
   {
