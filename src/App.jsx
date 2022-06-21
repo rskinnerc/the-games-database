@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
-import Game from './pages/Game';
+import Genre from './pages/Genre';
 import './App.css';
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <Routes>
         <Route index element={<Home />} />
-        <Route path="/game/:gameId" element={<Game />} />
+        <Route path="/genre/:genreId" element={<Genre />} />
       </Routes>
     </div>
   );
