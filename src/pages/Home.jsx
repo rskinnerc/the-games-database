@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { fetchAllGenres } from '../redux/categories/categoriesSlice';
 
 const Home = () => {
@@ -19,9 +20,11 @@ const Home = () => {
       <ul>
         {genres && genres.map((genre) => (
           <li key={genre.id}>
-            {genre.name}
-            {' '}
-            {genre.games_count}
+            <Link to={`/genre/${genre.slug}`}>
+              {genre.name}
+              {' '}
+              {genre.games_count}
+            </Link>
           </li>
         ))}
       </ul>
