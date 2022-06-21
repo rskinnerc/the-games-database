@@ -16,18 +16,36 @@ const Genre = () => {
   }, []);
 
   return (
-    <div>
-      Genre Page:
+    <>
       {genre && (
-        <div style={{ backgroundImage: `url(${genre.image_background})` }}>
-          <p>{ genre.name }</p>
-          { genre.games_count }
-        </div>
+        <>
+          <div className="h-52 flex flex-col justify-end font-lato bg-contain" style={{ backgroundImage: `url(${genre.image_background})` }}>
+            <h2 className="text-3xl text-right px-3 bg-marino-500/80 text-white font-bold">
+              { genre.name }
+              {' '}
+              Games
+            </h2>
+            <span className="px-3 text-right bg-marino-500/80 text-white">
+              Games Count:
+              {' '}
+              { genre.games_count }
+            </span>
+          </div>
+          <div className="font-lato text-sm bg-marino-600 text-white p-1 uppercase">{`${genre.name} GAMES BREAKDOWN`}</div>
+        </>
       )}
       <ul>
-        {games && games.map((game) => <li key={game.id}>{game.name}</li>)}
+        {games && games.map((game) => (
+          <li key={game.id} className="flex justify-between font-gill odd:bg-marino-500 even:bg-marino-700 text-white items-center px-2 py-6">
+            <span className="font-bold">{game.name}</span>
+            <div className="flex flex-col items-center">
+              <span>{`${game.rating} / 5`}</span>
+              <span className="text-marino-300">{`${game.ratings_count} votes`}</span>
+            </div>
+          </li>
+        ))}
       </ul>
-    </div>
+    </>
   );
 };
 
