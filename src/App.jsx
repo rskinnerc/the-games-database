@@ -5,7 +5,7 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <Routes>
         <Route index element={<Home />} />
         <Route path="/genre/:genreSlug" element={<Genre />} />
