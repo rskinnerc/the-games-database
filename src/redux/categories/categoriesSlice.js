@@ -11,6 +11,12 @@ export const fetchAllGenres = createAsyncThunk(
     const res = await fetch('https://api.rawg.io/api/genres?key=f701489903124362ba098939ed7babd7');
     return res.json();
   },
+  {
+    condition: (_, { getState }) => {
+      const { categories } = getState().categories;
+      return categories.length === 0;
+    },
+  },
 );
 
 export const categoriesSlice = createSlice({
