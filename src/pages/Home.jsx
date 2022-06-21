@@ -15,19 +15,25 @@ const Home = () => {
 
   return (
     <div>
-      <div className="bg-gradient-to-r from-marino-600 to-marino-600 via-marino-300">
-        <h1>The largest video games database.</h1>
-        <p>
-          More than 350.000 games for 50 platforms including mobiles. Start now filtering by genre!
+      <div className="bg-gradient-to-br from-marino-500 to-marino-900 flex flex-col items-center text-white px-5 py-8">
+        <h1 className="text-2xl text-center font-lato">The largest video games database.</h1>
+        <p className="my-6 text-center">
+          More than
+          {' '}
+          <span className="font-bold text-marino-200 text-xl">
+            350.000
+          </span>
+          {' '}
+          games for 50 platforms including mobiles. Start now filtering by genre!
         </p>
-        <input type="text" value={filter} onChange={(e) => setFilter(e.target.value)} />
+        <input placeholder="Filter by genre" className="bg-marino-50 rounded-md p-3 border-0 outline-0 ring-2 focus:ring-marino-400 ring-marino-200 text-marino-600 font-bold" type="text" value={filter} onChange={(e) => setFilter(e.target.value)} />
       </div>
       <div className="font-lato text-sm bg-marino-600 text-white p-1">STATS BY GENRE</div>
       <ul>
         {genres && genres.map((genre) => (
           <li key={genre.id} className="even:bg-marino-500 odd:bg-marino-700">
             <Link to={`/genre/${genre.slug}`}>
-              <img className="grayscale mix-blend-multiply hover:grayscale-0 hover:mix-blend-normal" src={genre.image_background} alt={genre.name} />
+              <img className="grayscale mix-blend-luminosity hover:grayscale-0 hover:mix-blend-normal" src={genre.image_background} alt={genre.name} />
               <h2>{genre.name}</h2>
               <h3>
                 Games Count:
