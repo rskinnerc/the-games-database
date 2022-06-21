@@ -19,6 +19,10 @@ module.exports = {
           900: '#06090F',
         },
       },
+      fontFamily: {
+        lato: ['Lato', 'sans-serif'],
+        gill: ['gill-sans', 'sans-serif'],
+      },
     },
   },
   plugins: [],
