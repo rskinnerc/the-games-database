@@ -1,35 +1,40 @@
-import { screen, render } from "@testing-library/react";
-import store from '../redux/configureStore'
-import { Provider } from "react-redux"
-import { MemoryRouter } from "react-router-dom"
-import App from "../App"
+import { screen, render } from '@testing-library/react';
+import { Provider } from 'react-redux';
+import { MemoryRouter } from 'react-router-dom';
+import store from '../redux/configureStore';
+import App from '../App';
+import { server } from '../mocks/server';
 
-describe("The home page functionality", () => {
-  it("should load the games for a given genre from the API and list them from Redux store", async () => {
+describe('The home page functionality', () => {
+  beforeAll(() => server.listen())
+  afterEach(() => server.resetHandlers())
+  afterAll(() => server.close())
+
+  it('should load the games for a given genre from the API and list them from Redux store', async () => {
     render(
       <Provider store={store}>
         <MemoryRouter initialEntries={['/genre/action']} initialIndex={0}>
           <App />
         </MemoryRouter>
-      </Provider>
+      </Provider>,
     );
 
-    const gamesBreakdownText = await screen.findByText("GAMES BREAKDOWN", { exact: false });
-    const votesText = await screen.findAllByText("votes", { exact: false });
+    const gamesBreakdownText = await screen.findByText('GAMES BREAKDOWN', { exact: false });
+    const votesText = await screen.findAllByText('votes', { exact: false });
     expect(gamesBreakdownText).toBeInTheDocument();
     expect(votesText.length).toBeGreaterThan(0);
-  })
+  });
 
-  it("should have the heading containing the games count for a given genre", async () => {
+  it('should have the heading containing the games count for a given genre', async () => {
     render(
       <Provider store={store}>
         <MemoryRouter initialEntries={['/genre/action']} initialIndex={0}>
           <App />
         </MemoryRouter>
-      </Provider>
+      </Provider>,
     );
 
-    const gamesCountText = await screen.findByText("Games Count:", { exact: false });
+    const gamesCountText = await screen.findByText('Games Count:', { exact: false });
     expect(gamesCountText).toBeInTheDocument();
-  })
+  });
 });
