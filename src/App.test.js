@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { Provider } from 'react-redux';
 import { MemoryRouter } from 'react-router-dom';
@@ -55,4 +55,16 @@ describe('The full App with routes', () => {
     const headingText = await screen.findByText('The largest video games database.');
     expect(headingText).toBeInTheDocument();
   });
+
+  it("should maintain the snapshot btween renders", async () => {
+    const dom = render(
+      <Provider store={store}>
+        <MemoryRouter>
+          <App />
+        </MemoryRouter>
+      </Provider>,
+    );
+
+    await waitFor(() => expect(dom).toMatchSnapshot());
+  })
 });

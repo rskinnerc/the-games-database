@@ -60,4 +60,16 @@ describe('The home page functionality', () => {
     expect(gamesBreakdownText).toBeInTheDocument();
     expect(votesText.length).toBeGreaterThan(0);
   });
+
+  it("should maintain the same snapshot between renders", async () => {
+    const dom = render(
+      <Provider store={store}>
+        <MemoryRouter initialEntries={['/']} initialIndex={0}>
+          <App />
+        </MemoryRouter>
+      </Provider>,
+    );
+
+    await waitFor(() => expect(dom).toMatchSnapshot());
+  })
 });

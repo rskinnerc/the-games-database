@@ -1,4 +1,4 @@
-import { screen, render } from '@testing-library/react';
+import { screen, render, waitFor } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import { MemoryRouter } from 'react-router-dom';
 import store from '../redux/configureStore';
@@ -37,4 +37,16 @@ describe('The home page functionality', () => {
     const gamesCountText = await screen.findByText('Games Count:', { exact: false });
     expect(gamesCountText).toBeInTheDocument();
   });
+
+  it("should maintain th sam snapshot between renders", async () => {
+    const dom = render(
+      <Provider store={store}>
+        <MemoryRouter initialEntries={['/genre/action']} initialIndex={0}>
+          <App />
+        </MemoryRouter>
+      </Provider>,
+    );
+
+    await waitFor(() => expect(dom).toMatchSnapshot());
+  })
 });

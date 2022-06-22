@@ -1,0 +1,242 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The home page functionality should maintain the same snapshot between renders 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div>
+        <nav
+          class="flex flex-row justify-around justify-items-center bg-marino-600 text-white py-2"
+        >
+          <h1
+            class="basis-10/12 pl-3 font-semibold font-gill"
+          >
+             
+            The Games Database
+          </h1>
+          <i
+            class="bi bi-mic-fill justify-self-end basis-1/12"
+          />
+          <i
+            class="bi bi-gear-fill justify-self-end basis-1/12"
+          />
+        </nav>
+        <div>
+          <div
+            class="bg-gradient-to-br from-marino-500 to-marino-900 flex flex-col items-center text-white px-5 py-8"
+          >
+            <h1
+              class="text-2xl text-center font-lato"
+            >
+              The largest video games database.
+            </h1>
+            <p
+              class="my-6 text-center"
+            >
+              More than
+               
+              <span
+                class="font-bold text-marino-200 text-xl"
+              >
+                350.000
+              </span>
+               
+              games for 50 platforms including mobiles. Start now filtering by genre!
+            </p>
+            <input
+              class="bg-marino-50 rounded-md p-3 border-0 outline-0 ring-2 focus:ring-marino-400 ring-marino-200 text-marino-600 font-bold"
+              placeholder="Filter by genre"
+              type="text"
+              value=""
+            />
+          </div>
+          <div
+            class="font-lato text-sm bg-marino-600 text-white p-1"
+          >
+            STATS BY GENRE
+          </div>
+          <ul
+            class="flex flex-row flex-wrap"
+          >
+            <li
+              class="odd:bg-marino-500 h-52 even:bg-marino-700 basis-1/2 relative"
+            >
+              <a
+                href="/genre/action"
+              >
+                <i
+                  class="bi bi-arrow-right-circle absolute top-0.5 right-1 z-30 font-bold text-white"
+                />
+                <img
+                  alt="Action"
+                  class="h-3/4 grayscale mix-blend-luminosity hover:grayscale-0 hover:mix-blend-normal"
+                  src="https://media.rawg.io/media/games/34b/34b1f1850a1c06fd971bc6ab3ac0ce0e.jpg"
+                />
+                <h2
+                  class="font-lato font-semibold text-white px-1 text-right"
+                >
+                  Action
+                </h2>
+                <h3
+                  class="text-sm text-white font-lato px-1 text-right"
+                >
+                  <span
+                    class="text-marino-200"
+                  >
+                    Games Count:
+                  </span>
+                   
+                  153243
+                </h3>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div>
+      <nav
+        class="flex flex-row justify-around justify-items-center bg-marino-600 text-white py-2"
+      >
+        <h1
+          class="basis-10/12 pl-3 font-semibold font-gill"
+        >
+           
+          The Games Database
+        </h1>
+        <i
+          class="bi bi-mic-fill justify-self-end basis-1/12"
+        />
+        <i
+          class="bi bi-gear-fill justify-self-end basis-1/12"
+        />
+      </nav>
+      <div>
+        <div
+          class="bg-gradient-to-br from-marino-500 to-marino-900 flex flex-col items-center text-white px-5 py-8"
+        >
+          <h1
+            class="text-2xl text-center font-lato"
+          >
+            The largest video games database.
+          </h1>
+          <p
+            class="my-6 text-center"
+          >
+            More than
+             
+            <span
+              class="font-bold text-marino-200 text-xl"
+            >
+              350.000
+            </span>
+             
+            games for 50 platforms including mobiles. Start now filtering by genre!
+          </p>
+          <input
+            class="bg-marino-50 rounded-md p-3 border-0 outline-0 ring-2 focus:ring-marino-400 ring-marino-200 text-marino-600 font-bold"
+            placeholder="Filter by genre"
+            type="text"
+            value=""
+          />
+        </div>
+        <div
+          class="font-lato text-sm bg-marino-600 text-white p-1"
+        >
+          STATS BY GENRE
+        </div>
+        <ul
+          class="flex flex-row flex-wrap"
+        >
+          <li
+            class="odd:bg-marino-500 h-52 even:bg-marino-700 basis-1/2 relative"
+          >
+            <a
+              href="/genre/action"
+            >
+              <i
+                class="bi bi-arrow-right-circle absolute top-0.5 right-1 z-30 font-bold text-white"
+              />
+              <img
+                alt="Action"
+                class="h-3/4 grayscale mix-blend-luminosity hover:grayscale-0 hover:mix-blend-normal"
+                src="https://media.rawg.io/media/games/34b/34b1f1850a1c06fd971bc6ab3ac0ce0e.jpg"
+              />
+              <h2
+                class="font-lato font-semibold text-white px-1 text-right"
+              >
+                Action
+              </h2>
+              <h3
+                class="text-sm text-white font-lato px-1 text-right"
+              >
+                <span
+                  class="text-marino-200"
+                >
+                  Games Count:
+                </span>
+                 
+                153243
+              </h3>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
