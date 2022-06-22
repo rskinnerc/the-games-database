@@ -6,7 +6,7 @@ import Navbar from './components/Navbar';
 
 function App() {
   return (
-    <div>
+    <div className="bg-gradient-to-r from-marino-900 to-marino-900 via-marino-700 min-h-screen">
       <Navbar />
       <Routes>
         <Route index element={<Home />} />

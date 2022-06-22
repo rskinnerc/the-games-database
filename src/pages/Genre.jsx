@@ -16,7 +16,7 @@ const Genre = () => {
   }, []);
 
   return (
-    <>
+    <div className="sm:w-96 mx-auto">
       {genre && (
         <>
           <div className="h-52 flex flex-col justify-end font-lato bg-contain" style={{ backgroundImage: `url(${genre.image_background})` }}>
@@ -45,7 +45,7 @@ const Genre = () => {
           </li>
         ))}
       </ul>
-    </>
+    </div>
   );
 };
 

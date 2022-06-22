@@ -14,7 +14,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div>
+    <div className="sm:w-96 mx-auto">
       <div className="bg-gradient-to-br from-marino-500 to-marino-900 flex flex-col items-center text-white px-5 py-8">
         <h1 className="text-2xl text-center font-lato">The largest video games database.</h1>
         <p className="my-6 text-center">
@@ -34,7 +34,7 @@ const Home = () => {
           <li key={genre.id} className="odd:bg-marino-500 h-52 even:bg-marino-700 basis-1/2 relative">
             <Link to={`/genre/${genre.slug}`}>
               <i className="bi bi-arrow-right-circle absolute top-0.5 right-1 z-30 font-bold text-white" />
-              <img className="h-3/4 grayscale mix-blend-luminosity hover:grayscale-0 hover:mix-blend-normal" src={genre.image_background} alt={genre.name} />
+              <img className="h-4/5 grayscale mix-blend-luminosity hover:grayscale-0 hover:mix-blend-normal" src={genre.image_background} alt={genre.name} />
               <h2 className="font-lato font-semibold text-white px-1 text-right">{genre.name}</h2>
               <h3 className="text-sm text-white font-lato px-1 text-right">
                 <span className="text-marino-200">
