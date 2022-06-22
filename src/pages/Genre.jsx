@@ -7,6 +7,8 @@ import { fetchGamesByGenre } from '../redux/games/gamesSlice';
 const Genre = () => {
   const { genreSlug } = useParams();
   const dispatch = useDispatch();
+  const loadingGames = useSelector((state) => state.games.loadingGames);
+  const loadingGenre = useSelector((state) => state.categories.loadingGenre);
   const games = useSelector((state) => state.games.games[genreSlug]);
   const genre = useSelector((state) => state.categories.genresOverview[genreSlug]);
 
@@ -17,7 +19,7 @@ const Genre = () => {
 
   return (
     <div className="sm:w-96 mx-auto">
-      {genre && (
+      {!loadingGenre && genre && (
         <>
           <div className="h-52 flex flex-col justify-end font-lato bg-contain" style={{ backgroundImage: `url(${genre.image_background})` }}>
             <h2 className="text-3xl text-right px-3 bg-marino-500/80 text-white font-bold">
@@ -34,8 +36,9 @@ const Genre = () => {
           <div className="font-lato text-sm bg-marino-600 text-white p-1 uppercase">{`${genre.name} GAMES BREAKDOWN`}</div>
         </>
       )}
+      {loadingGames && <div className="py-10 animate-bounce text-center"><i className="bi bi-cloud-download text-white text-3xl mx-auto" /></div>}
       <ul>
-        {games && games.map((game) => (
+        {!loadingGames && games && games.map((game) => (
           <li key={game.id} className="flex justify-between font-gill odd:bg-marino-500 even:bg-marino-700 text-white items-center px-2 py-6">
             <span className="font-bold">{game.name}</span>
             <div className="flex flex-col items-center">

@@ -4,6 +4,8 @@ const initialState = {
   categories: [],
   count: 0,
   genresOverview: {},
+  loadingGenres: false,
+  loadingGenre: false,
 };
 
 export const fetchAllGenres = createAsyncThunk(
@@ -39,10 +41,20 @@ export const categoriesSlice = createSlice({
     builder.addCase(fetchAllGenres.fulfilled, (state, action) => {
       state.count = action.payload.count;
       state.categories = action.payload.results;
+      state.loadingGenres = false;
     });
 
     builder.addCase(fetchGenreBySlug.fulfilled, (state, action) => {
       state.genresOverview[action.meta.arg] = action.payload;
+      state.loadingGenre = false;
+    });
+
+    builder.addCase(fetchAllGenres.pending, (state) => {
+      state.loadingGenres = true;
+    });
+
+    builder.addCase(fetchGenreBySlug.pending, (state) => {
+      state.loadingGenre = true;
     });
   },
 });

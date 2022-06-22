@@ -6,6 +6,7 @@ import { fetchAllGenres } from '../redux/categories/categoriesSlice';
 const Home = () => {
   const dispatch = useDispatch();
   const [filter, setFilter] = useState('');
+  const loadingGenres = useSelector((state) => state.categories.loadingGenres);
   const genres = useSelector(({ categories }) => categories.categories
     .filter((genre) => genre.name.toLowerCase().includes(filter.toLowerCase())));
 
@@ -29,8 +30,9 @@ const Home = () => {
         <input placeholder="Filter by genre" className="bg-marino-50 rounded-md p-3 border-0 outline-0 ring-2 focus:ring-marino-400 ring-marino-200 text-marino-600 font-bold" type="text" value={filter} onChange={(e) => setFilter(e.target.value)} />
       </div>
       <div className="font-lato text-sm bg-marino-600 text-white p-1">STATS BY GENRE</div>
+      {loadingGenres && <div className="py-10 animate-bounce text-center"><i className="bi bi-cloud-download text-white text-3xl mx-auto" /></div>}
       <ul className="flex flex-row flex-wrap">
-        {genres && genres.map((genre) => (
+        {!loadingGenres && genres.map((genre) => (
           <li key={genre.id} className="odd:bg-marino-500 h-52 even:bg-marino-700 basis-1/2 relative">
             <Link to={`/genre/${genre.slug}`}>
               <i className="bi bi-arrow-right-circle absolute top-0.5 right-1 z-30 font-bold text-white" />

@@ -2,6 +2,7 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   games: {},
+  loadingGames: false,
 };
 
 export const fetchGamesByGenre = createAsyncThunk(
@@ -28,6 +29,11 @@ export const gamesSlice = createSlice({
     /* eslint-disable no-param-reassign */
     builder.addCase(fetchGamesByGenre.fulfilled, (state, action) => {
       state.games[action.meta.arg] = action.payload.results;
+      state.loadingGames = false;
+    });
+
+    builder.addCase(fetchGamesByGenre.pending, (state) => {
+      state.loadingGames = true;
     });
   },
 });

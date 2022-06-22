@@ -5,9 +5,11 @@ Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <div>
+      <div
+        class="bg-gradient-to-r from-marino-900 to-marino-900 via-marino-700 min-h-screen"
+      >
         <nav
-          class="flex flex-row justify-around justify-items-center bg-marino-600 text-white py-2"
+          class="flex flex-row justify-items-center bg-marino-600 text-white py-2 sm:w-96 mx-auto"
         >
           <h1
             class="basis-10/12 pl-3 font-semibold font-gill"
@@ -31,29 +33,66 @@ Object {
           />
         </nav>
         <div
-          class="h-52 flex flex-col justify-end font-lato bg-contain"
-          style="background-image: url(https://media.rawg.io/media/games/34b/34b1f1850a1c06fd971bc6ab3ac0ce0e.jpg);"
+          class="sm:w-96 mx-auto"
         >
-          <h2
-            class="text-3xl text-right px-3 bg-marino-500/80 text-white font-bold"
-          >
-            Action
-             
-            Games
-          </h2>
-          <span
-            class="px-3 text-right bg-marino-500/80 text-white"
-          >
-            Games Count:
-             
-            153243
-          </span>
+          <ul>
+            <li
+              class="flex justify-between font-gill odd:bg-marino-500 even:bg-marino-700 text-white items-center px-2 py-6"
+            >
+              <span
+                class="font-bold"
+              >
+                Grand Theft Auto V
+              </span>
+              <div
+                class="flex flex-col items-center"
+              >
+                <span>
+                  4.48 / 5
+                </span>
+                <span
+                  class="text-marino-300"
+                >
+                  5720 votes
+                </span>
+              </div>
+            </li>
+          </ul>
         </div>
-        <div
-          class="font-lato text-sm bg-marino-600 text-white p-1 uppercase"
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="bg-gradient-to-r from-marino-900 to-marino-900 via-marino-700 min-h-screen"
+    >
+      <nav
+        class="flex flex-row justify-items-center bg-marino-600 text-white py-2 sm:w-96 mx-auto"
+      >
+        <h1
+          class="basis-10/12 pl-3 font-semibold font-gill"
         >
-          Action GAMES BREAKDOWN
-        </div>
+          <a
+            href="/"
+          >
+            <i
+              class="bi bi-caret-left-fill"
+              data-testid="backButton"
+            />
+          </a>
+           
+          The Games Database
+        </h1>
+        <i
+          class="bi bi-mic-fill justify-self-end basis-1/12"
+        />
+        <i
+          class="bi bi-gear-fill justify-self-end basis-1/12"
+        />
+      </nav>
+      <div
+        class="sm:w-96 mx-auto"
+      >
         <ul>
           <li
             class="flex justify-between font-gill odd:bg-marino-500 even:bg-marino-700 text-white items-center px-2 py-6"
@@ -78,81 +117,6 @@ Object {
           </li>
         </ul>
       </div>
-    </div>
-  </body>,
-  "container": <div>
-    <div>
-      <nav
-        class="flex flex-row justify-around justify-items-center bg-marino-600 text-white py-2"
-      >
-        <h1
-          class="basis-10/12 pl-3 font-semibold font-gill"
-        >
-          <a
-            href="/"
-          >
-            <i
-              class="bi bi-caret-left-fill"
-              data-testid="backButton"
-            />
-          </a>
-           
-          The Games Database
-        </h1>
-        <i
-          class="bi bi-mic-fill justify-self-end basis-1/12"
-        />
-        <i
-          class="bi bi-gear-fill justify-self-end basis-1/12"
-        />
-      </nav>
-      <div
-        class="h-52 flex flex-col justify-end font-lato bg-contain"
-        style="background-image: url(https://media.rawg.io/media/games/34b/34b1f1850a1c06fd971bc6ab3ac0ce0e.jpg);"
-      >
-        <h2
-          class="text-3xl text-right px-3 bg-marino-500/80 text-white font-bold"
-        >
-          Action
-           
-          Games
-        </h2>
-        <span
-          class="px-3 text-right bg-marino-500/80 text-white"
-        >
-          Games Count:
-           
-          153243
-        </span>
-      </div>
-      <div
-        class="font-lato text-sm bg-marino-600 text-white p-1 uppercase"
-      >
-        Action GAMES BREAKDOWN
-      </div>
-      <ul>
-        <li
-          class="flex justify-between font-gill odd:bg-marino-500 even:bg-marino-700 text-white items-center px-2 py-6"
-        >
-          <span
-            class="font-bold"
-          >
-            Grand Theft Auto V
-          </span>
-          <div
-            class="flex flex-col items-center"
-          >
-            <span>
-              4.48 / 5
-            </span>
-            <span
-              class="text-marino-300"
-            >
-              5720 votes
-            </span>
-          </div>
-        </li>
-      </ul>
     </div>
   </div>,
   "debug": [Function],

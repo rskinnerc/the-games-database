@@ -5,9 +5,11 @@ Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <div>
+      <div
+        class="bg-gradient-to-r from-marino-900 to-marino-900 via-marino-700 min-h-screen"
+      >
         <nav
-          class="flex flex-row justify-around justify-items-center bg-marino-600 text-white py-2"
+          class="flex flex-row justify-items-center bg-marino-600 text-white py-2 sm:w-96 mx-auto"
         >
           <h1
             class="basis-10/12 pl-3 font-semibold font-gill"
@@ -22,7 +24,9 @@ Object {
             class="bi bi-gear-fill justify-self-end basis-1/12"
           />
         </nav>
-        <div>
+        <div
+          class="sm:w-96 mx-auto"
+        >
           <div
             class="bg-gradient-to-br from-marino-500 to-marino-900 flex flex-col items-center text-white px-5 py-8"
           >
@@ -70,7 +74,7 @@ Object {
                 />
                 <img
                   alt="Action"
-                  class="h-3/4 grayscale mix-blend-luminosity hover:grayscale-0 hover:mix-blend-normal"
+                  class="h-4/5 grayscale mix-blend-luminosity hover:grayscale-0 hover:mix-blend-normal"
                   src="https://media.rawg.io/media/games/34b/34b1f1850a1c06fd971bc6ab3ac0ce0e.jpg"
                 />
                 <h2
@@ -97,9 +101,11 @@ Object {
     </div>
   </body>,
   "container": <div>
-    <div>
+    <div
+      class="bg-gradient-to-r from-marino-900 to-marino-900 via-marino-700 min-h-screen"
+    >
       <nav
-        class="flex flex-row justify-around justify-items-center bg-marino-600 text-white py-2"
+        class="flex flex-row justify-items-center bg-marino-600 text-white py-2 sm:w-96 mx-auto"
       >
         <h1
           class="basis-10/12 pl-3 font-semibold font-gill"
@@ -114,7 +120,9 @@ Object {
           class="bi bi-gear-fill justify-self-end basis-1/12"
         />
       </nav>
-      <div>
+      <div
+        class="sm:w-96 mx-auto"
+      >
         <div
           class="bg-gradient-to-br from-marino-500 to-marino-900 flex flex-col items-center text-white px-5 py-8"
         >
@@ -162,7 +170,7 @@ Object {
               />
               <img
                 alt="Action"
-                class="h-3/4 grayscale mix-blend-luminosity hover:grayscale-0 hover:mix-blend-normal"
+                class="h-4/5 grayscale mix-blend-luminosity hover:grayscale-0 hover:mix-blend-normal"
                 src="https://media.rawg.io/media/games/34b/34b1f1850a1c06fd971bc6ab3ac0ce0e.jpg"
               />
               <h2
