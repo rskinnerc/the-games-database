@@ -7,9 +7,9 @@ import store from './redux/configureStore';
 import { server } from './mocks/server';
 
 describe('The full App with routes', () => {
-  beforeAll(() => server.listen())
-  afterEach(() => server.resetHandlers())
-  afterAll(() => server.close())
+  beforeAll(() => server.listen());
+  afterEach(() => server.resetHandlers());
+  afterAll(() => server.close());
 
   it('should render the home page', () => {
     render(
@@ -56,7 +56,7 @@ describe('The full App with routes', () => {
     expect(headingText).toBeInTheDocument();
   });
 
-  it("should maintain the snapshot btween renders", async () => {
+  it('should maintain the snapshot btween renders', async () => {
     const dom = render(
       <Provider store={store}>
         <MemoryRouter>
@@ -66,5 +66,5 @@ describe('The full App with routes', () => {
     );
 
     await waitFor(() => expect(dom).toMatchSnapshot());
-  })
+  });
 });

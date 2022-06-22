@@ -6,9 +6,9 @@ import App from '../App';
 import { server } from '../mocks/server';
 
 describe('The home page functionality', () => {
-  beforeAll(() => server.listen())
-  afterEach(() => server.resetHandlers())
-  afterAll(() => server.close())
+  beforeAll(() => server.listen());
+  afterEach(() => server.resetHandlers());
+  afterAll(() => server.close());
 
   it('should load the games for a given genre from the API and list them from Redux store', async () => {
     render(
@@ -38,7 +38,7 @@ describe('The home page functionality', () => {
     expect(gamesCountText).toBeInTheDocument();
   });
 
-  it("should maintain th sam snapshot between renders", async () => {
+  it('should maintain th sam snapshot between renders', async () => {
     const dom = render(
       <Provider store={store}>
         <MemoryRouter initialEntries={['/genre/action']} initialIndex={0}>
@@ -48,5 +48,5 @@ describe('The home page functionality', () => {
     );
 
     await waitFor(() => expect(dom).toMatchSnapshot());
-  })
+  });
 });
